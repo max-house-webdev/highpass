@@ -5,10 +5,9 @@ import { BurgerClose as BurgerCloseButton } from "../ui/BurgerClose";
 import { Drawer } from "./Drawer";
 
 import { useMobileDrawer } from "./useMobileDrawer";
+import { Navbar } from "../../Navbar";
 
-export interface IMobileDrawerProps {}
-
-export function MobileDrawer(props: IMobileDrawerProps) {
+export function MobileDrawer() {
   const { state, burgerOpenClickHandler, burgerCloseClickHandler } =
     useMobileDrawer();
 
@@ -17,7 +16,8 @@ export function MobileDrawer(props: IMobileDrawerProps) {
       <BurgerOpenButton onClick={burgerOpenClickHandler} />
       <Overlay status={state.overlay} />
       <Drawer status={state.mobileMenu}>
-        <BurgerCloseButton onClick={burgerCloseClickHandler} /> HeaderMenuList
+        <BurgerCloseButton onClick={burgerCloseClickHandler} />
+        <Navbar />
       </Drawer>
     </>
   );

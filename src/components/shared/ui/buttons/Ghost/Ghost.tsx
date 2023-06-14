@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from "@chakra-ui/react";
-import { useEvent } from "@src/mh-utils/hooks/useEvent";
+import { useEvent } from "@mh-utils/hooks/useEvent";
 import { ReactNode } from "react";
 
 export interface IGhostProps extends ButtonProps {

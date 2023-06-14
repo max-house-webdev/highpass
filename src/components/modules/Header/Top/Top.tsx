@@ -1,5 +1,5 @@
 import { Container } from "@components/containers/Container";
-import { Logo } from "@components/shared/simple/Logo";
+import { Logo } from "@src/components/shared/ui/links/Logo";
 import { Search as SearchButton } from "@components/shared/ui/buttons/Search";
 
 export function Top() {

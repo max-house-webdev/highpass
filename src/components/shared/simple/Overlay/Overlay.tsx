@@ -1,7 +1,6 @@
 import { Box, Portal } from "@chakra-ui/react";
-import { useKeyframesAnimation } from "@mh-utils/hooks/useKeyframesAnimation";
-import type { TOpenStatus } from "@src/core/types/TOpenStatus";
-import { animationDuration } from "@src/core/constant/animation";
+import type { TOpenStatus } from "@core/types/TOpenStatus";
+import { useOverlayAnimation } from "./useOverlayAnimation";
 
 export interface IOverlayProps {
   status: TOpenStatus;
@@ -10,34 +9,7 @@ export interface IOverlayProps {
 export function Overlay(props: IOverlayProps) {
   const { status } = props;
 
-  const animationCSSInterpolationIn = `
-  from { opacity: 0; }
-  to { opacity: 1; }
-`;
-
-  const animationCSSInterpolationOut = `
-from { opacity: 1; }
-to { opacity: 0;}
-`;
-
-  const animationCSSInterpolation = () => {
-    switch (status) {
-      case "isOpening": {
-        return animationCSSInterpolationIn;
-      }
-      case "isClosing": {
-        return animationCSSInterpolationOut;
-      }
-      default: {
-        return "";
-      }
-    }
-  };
-
-  const animation = useKeyframesAnimation({
-    animationCSSInterpolation: animationCSSInterpolation(),
-    animationDuration,
-  });
+  const animation = useOverlayAnimation({ status });
 
   return (
     <Portal>
