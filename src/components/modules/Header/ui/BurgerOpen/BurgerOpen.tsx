@@ -12,7 +12,11 @@ export function BurgerOpen(props: IBurgerOpenProps) {
   const fill = useWhiteModeValue();
 
   return (
-    <GhostButton data-testid="BurgerOpen" onClick={onClick}>
+    <GhostButton
+      data-testid="BurgerOpen"
+      onClick={onClick}
+      paddingInlineStart={0}
+    >
       <BurgerIcon fill={fill} />
     </GhostButton>
   );
