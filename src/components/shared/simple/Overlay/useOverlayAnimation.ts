@@ -2,11 +2,11 @@ import { animationDuration } from "@core/constant/animation";
 import { TOpenStatus } from "@core/types/TOpenStatus";
 import { useKeyframesAnimation } from "@mh-utils/hooks/useKeyframesAnimation";
 
-export interface IUseOverlayAnimation {
+export interface IUseOverlayAnimationArgs {
   status: TOpenStatus;
 }
 
-export function useOverlayAnimation(args: IUseOverlayAnimation) {
+export function useOverlayAnimation(args: IUseOverlayAnimationArgs) {
   const { status } = args;
 
   const animationCSSInterpolationIn = `

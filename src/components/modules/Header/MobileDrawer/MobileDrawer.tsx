@@ -6,6 +6,8 @@ import { Drawer } from "./Drawer";
 
 import { useMobileDrawer } from "./useMobileDrawer";
 import { Navbar } from "../../Navbar";
+import { HStack } from "@chakra-ui/react";
+import { ToggleTheme } from "@components/shared/ui/buttons/ToggleTheme";
 
 export function MobileDrawer() {
   const { state, burgerOpenClickHandler, burgerCloseClickHandler } =
@@ -14,9 +16,14 @@ export function MobileDrawer() {
   return (
     <>
       <BurgerOpenButton onClick={burgerOpenClickHandler} />
+
       <Overlay status={state.overlay} />
+
       <Drawer status={state.mobileMenu}>
-        <BurgerCloseButton onClick={burgerCloseClickHandler} />
+        <HStack justifyContent={"space-between"} w={"100%"}>
+          <BurgerCloseButton onClick={burgerCloseClickHandler} />
+          <ToggleTheme />
+        </HStack>
         <Navbar />
       </Drawer>
     </>

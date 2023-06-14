@@ -1,10 +1,11 @@
 import { Link } from "@chakra-ui/react";
 import { Logo as LogoIcon } from "@components/shared/icons/Logo";
-import { useAccentModeValue, useWhiteModeValue } from "@features/colorMode";
+
+import { useBrandColor } from "@features/colorMode/useBrandColor";
 
 export function Logo() {
-  const fillWhite = useWhiteModeValue();
-  const fillAccent = useAccentModeValue();
+  const fillWhite = useBrandColor({ color: "white" });
+  const fillAccent = useBrandColor({ color: "accent" });
 
   return (
     <Link href={"/"}>

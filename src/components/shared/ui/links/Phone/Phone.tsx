@@ -1,11 +1,11 @@
 import { Link, LinkProps } from "@chakra-ui/react";
-import { useAccentModeValue } from "@features/colorMode";
 import { contacts } from "@core/constant/content";
 import { formatPhoneNumber } from "./formatPhoneNumber";
 import { Phone as PhoneIcon } from "@components/shared/icons/Phone";
+import { useBrandColor } from "@src/features/colorMode/useBrandColor";
 
 export function Phone(props: LinkProps) {
-  const color = useAccentModeValue();
+  const color = useBrandColor({ color: "accent" });
   const { phoneNumber } = contacts;
 
   const formattedPhoneNumber = formatPhoneNumber(phoneNumber);

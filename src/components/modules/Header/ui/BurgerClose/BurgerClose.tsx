@@ -11,14 +11,16 @@ export function BurgerClose(props: IBurgerCloseProps) {
 
   const fill = useWhiteModeValue();
 
+  const size = 7;
+
   return (
     <GhostButton
       data-testid="BurgerClose"
       onClick={onClick}
-      h={7}
-      w={7}
-      minH={7}
-      minW={7}
+      h={size}
+      w={size}
+      minH={size}
+      minW={size}
       padding={1}
       bgColor={"brand.lightGray"}
       borderRadius={"50%"}

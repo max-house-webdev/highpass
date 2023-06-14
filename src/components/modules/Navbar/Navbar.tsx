@@ -14,7 +14,11 @@ export function Navbar() {
       minH={"100%"}
       paddingBlockEnd={"35px"}
     >
-      <UnorderedList marginInlineStart={0} marginBlockEnd={"auto"}>
+      <UnorderedList
+        marginInlineStart={0}
+        marginBlockEnd={"auto"}
+        listStyleType={"none"}
+      >
         {sections.map((item) => {
           const { id, title } = item;
 
