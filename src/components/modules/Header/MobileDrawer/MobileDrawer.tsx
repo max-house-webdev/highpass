@@ -1,5 +1,3 @@
-import { Overlay } from "@components/shared/simple/Overlay";
-
 import { BurgerOpen as BurgerOpenButton } from "../ui/BurgerOpen";
 import { BurgerClose as BurgerCloseButton } from "../ui/BurgerClose";
 import { Drawer } from "./Drawer";
@@ -16,8 +14,6 @@ export function MobileDrawer() {
   return (
     <>
       <BurgerOpenButton onClick={burgerOpenClickHandler} />
-
-      <Overlay status={state.overlay} />
 
       <Drawer status={state.mobileMenu}>
         <HStack justifyContent={"space-between"} w={"100%"}>
