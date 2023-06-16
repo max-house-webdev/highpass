@@ -1,23 +1,26 @@
+import { HStack } from "@chakra-ui/react";
+import { ToggleTheme } from "@components/shared/ui/buttons/ToggleTheme";
+import { useAppearanceAnimation } from "@features/hooks/useAppearanceAnimation";
+import { animationDuration } from "@core/constant/animation";
+
 import { BurgerOpen as BurgerOpenButton } from "../ui/BurgerOpen";
 import { BurgerClose as BurgerCloseButton } from "../ui/BurgerClose";
 import { Drawer } from "./Drawer";
-
-import { useMobileDrawer } from "./useMobileDrawer";
 import { Navbar } from "../../Navbar";
-import { HStack } from "@chakra-ui/react";
-import { ToggleTheme } from "@components/shared/ui/buttons/ToggleTheme";
 
 export function MobileDrawer() {
-  const { state, burgerOpenClickHandler, burgerCloseClickHandler } =
-    useMobileDrawer();
+  const { appearanceState, onOpen, onClose } = useAppearanceAnimation({
+    initialState: "closed",
+    animationDuration: animationDuration,
+  });
 
   return (
     <>
-      <BurgerOpenButton onClick={burgerOpenClickHandler} />
+      <BurgerOpenButton onClick={onOpen} />
 
-      <Drawer status={state.mobileMenu}>
+      <Drawer status={appearanceState}>
         <HStack justifyContent={"space-between"} w={"100%"}>
-          <BurgerCloseButton onClick={burgerCloseClickHandler} />
+          <BurgerCloseButton onClick={onClose} />
           <ToggleTheme />
         </HStack>
         <Navbar />

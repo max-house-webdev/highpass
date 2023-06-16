@@ -2,21 +2,15 @@ import { animationDuration } from "@core/constant/animation";
 import { TAppearanceStatus } from "@features/hooks/useAppearanceAnimation";
 import { useKeyframesAnimation } from "@mh-utils/hooks/useKeyframesAnimation";
 
-export interface IUseOverlayAnimationArgs {
-  status: TAppearanceStatus;
-}
-
-export function useOverlayAnimation(args: IUseOverlayAnimationArgs) {
-  const { status } = args;
-
+export function useDrawerAnimation(status: TAppearanceStatus) {
   const animationCSSInterpolationIn = `
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0; transform: translateX(-75%) }
+  to { opacity: 1; transform: translateX(0)}
 `;
 
   const animationCSSInterpolationOut = `
-from { opacity: 1; }
-to { opacity: 0;}
+  from { opacity: 1; transform: translateX(0) }
+  to { opacity: 0; transform: translateX(75%)}
 `;
 
   const animationCSSInterpolation = () => {

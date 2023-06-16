@@ -1,9 +1,9 @@
 import { Box, Portal } from "@chakra-ui/react";
-import type { TOpenStatus } from "@core/types/TOpenStatus";
+import type { TAppearanceStatus } from "@features/hooks/useAppearanceAnimation";
 import { useOverlayAnimation } from "./useOverlayAnimation";
 
 export interface IOverlayProps {
-  status: TOpenStatus;
+  status: TAppearanceStatus;
 }
 
 export function Overlay(props: IOverlayProps) {
