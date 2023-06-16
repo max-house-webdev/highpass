@@ -1,9 +1,6 @@
-import { v4 as uuidv4 } from "uuid";
-import { MenuItem } from "./MenuItem";
-
-import { sections } from "@core/constant/content";
-import { Box, UnorderedList } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Phone as PhoneLink } from "@src/components/shared/ui/links/Phone";
+import { NavMenuList } from "../NavMenuList";
 
 export function Navbar() {
   return (
@@ -14,18 +11,8 @@ export function Navbar() {
       minH={"100%"}
       paddingBlockEnd={"35px"}
     >
-      <UnorderedList
-        marginInlineStart={0}
-        marginBlockEnd={"auto"}
-        listStyleType={"none"}
-      >
-        {sections.map((item) => {
-          const { id, title } = item;
-
-          return <MenuItem key={uuidv4()} href={id} title={title} />;
-        })}
-      </UnorderedList>
-      <PhoneLink justifySelf={"flex-end"} />
+      <NavMenuList />
+      <PhoneLink />
     </Box>
   );
 }
