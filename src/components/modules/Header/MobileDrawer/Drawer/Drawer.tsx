@@ -21,11 +21,11 @@ export function Drawer(props: IDrawerProps) {
         display={status === "closed" ? "none" : "flex"}
         top={"70px"}
         left={0}
-        width={"100vw"}
-        height={"calc(100vh - 70px)"}
+        w={"100vw"}
+        h={"calc(100vh - 70px)"}
         paddingTop={"15px"}
         paddingBottom={"35px"}
-        paddingX={5}
+        px={5}
         zIndex={300}
         justifyContent={"flex-start"}
         alignItems={"flex-start"}

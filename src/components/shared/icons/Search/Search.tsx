@@ -1,6 +1,6 @@
-import { Icon } from "@chakra-ui/react";
+import { Icon, IconProps } from "@chakra-ui/react";
 
-export interface ISearchProps {
+export interface ISearchProps extends IconProps {
   fill: string;
 }
 

@@ -1,21 +1,27 @@
-import { Search as SearchIcon } from "@components/shared/icons/Search";
+import { Button } from "@chakra-ui/react";
 
-import { Ghost as GhostButton } from "../Ghost";
-import { useBrandColor } from "@features/colorMode/useBrandColor";
-import { useColorMode } from "@chakra-ui/react";
+import { Search as SearchIcon } from "@components/shared/icons/Search";
+import { useEvent } from "@mh-utils/hooks/useEvent";
+import { useToggleWhite } from "@features/colorMode/useToggleWhite";
 
 export function Search() {
-  const { colorMode } = useColorMode();
-  const fillLight = useBrandColor({ color: "white" });
-  const fillDark = useBrandColor({ color: "lightGray" });
+  const fill = useToggleWhite();
 
-  const onClick = () => {
-    console.log("SearchButton click");
-  };
+  const onClick = useEvent(() => console.log("SearchButton click"));
 
   return (
-    <GhostButton data-testid="Search" onClick={onClick}>
-      <SearchIcon fill={colorMode === "light" ? fillLight : fillDark} />
-    </GhostButton>
+    <Button
+      variant={"brandGhost"}
+      data-testid="Search"
+      onClick={onClick}
+      aria-label={"button-search"}
+    >
+      <SearchIcon
+        fill={fill}
+        _hover={{
+          path: { fill: "brand.accentHover" },
+        }}
+      />
+    </Button>
   );
 }

@@ -1,6 +1,7 @@
-import { Ghost as GhostButton } from "@components/shared/ui/buttons/Ghost";
+import { Button } from "@chakra-ui/react";
 import { Burger as BurgerIcon } from "@components/shared/icons/Burger";
-import { useWhiteModeValue } from "@features/colorMode";
+import { useEvent } from "@mh-utils/hooks/useEvent";
+import { useToggleWhite } from "@features/colorMode/useToggleWhite";
 
 export interface IBurgerOpenProps {
   onClick: () => void;
@@ -9,15 +10,18 @@ export interface IBurgerOpenProps {
 export function BurgerOpen(props: IBurgerOpenProps) {
   const { onClick } = props;
 
-  const fill = useWhiteModeValue();
+  const fill = useToggleWhite();
+
+  const onClickCb = useEvent(onClick);
 
   return (
-    <GhostButton
+    <Button
+      variant={"brandGhost}"}
       data-testid="BurgerOpen"
-      onClick={onClick}
+      onClick={onClickCb}
       paddingInlineStart={0}
     >
       <BurgerIcon fill={fill} />
-    </GhostButton>
+    </Button>
   );
 }

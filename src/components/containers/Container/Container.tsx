@@ -11,7 +11,7 @@ export function Container(props: IContainerProps) {
   return (
     <ChakraContainer
       maxW={{ base: "100vw", md: "768px", lg: "1024px", "2xl": "1920px" }}
-      paddingX={{ base: 5, md: 7, lg: "30px", "2xl": "315px" }}
+      px={{ base: 5, md: 7, lg: "30px", "2xl": "315px" }}
       {...rest}
     >
       {children}

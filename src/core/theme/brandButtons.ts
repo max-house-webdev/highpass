@@ -1,0 +1,42 @@
+import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
+import { colors } from "./colors";
+
+const brandGhost = defineStyle({
+  p: 3,
+  mx: -3,
+
+  _focusVisible: {
+    boxShadow: `0 0 0 3px ${colors.brand.accentFocus}`,
+  },
+});
+
+const brandPrimary = defineStyle({
+  fontFamily: "inherit",
+  bgColor: colors.brand.accent,
+  color: colors.brand.white,
+  rounded: "none",
+  py: 3,
+  px: 6,
+  borderWidth: 3,
+  borderStyle: "solid",
+  borderColor: colors.brand.accent,
+
+  _hover: {
+    bgColor: colors.brand.accentHover,
+    borderColor: colors.brand.accentHover,
+  },
+
+  _focus: {
+    borderColor: colors.brand.accentHover,
+  },
+
+  // _dark: {
+  //   bgColor: colors.inverted.accent,
+  //   color: colors.inverted.white,
+  //   borderColor: "brand.accent",
+  // },
+});
+
+export const brandButtons = defineStyleConfig({
+  variants: { brandGhost, brandPrimary },
+});

@@ -1,6 +1,7 @@
-import { Ghost as GhostButton } from "@components/shared/ui/buttons/Ghost";
-import { Cross as CrossIcon } from "@src/components/shared/icons/Cross";
-import { useWhiteModeValue } from "@src/features/colorMode";
+import { Button } from "@chakra-ui/react";
+import { Cross as CrossIcon } from "@components/shared/icons/Cross";
+import { useEvent } from "@mh-utils/hooks/useEvent";
+import { useToggleWhite } from "@features/colorMode/useToggleWhite";
 
 export interface IBurgerCloseProps {
   onClick: () => void;
@@ -9,23 +10,29 @@ export interface IBurgerCloseProps {
 export function BurgerClose(props: IBurgerCloseProps) {
   const { onClick } = props;
 
-  const fill = useWhiteModeValue();
+  const fill = useToggleWhite();
 
   const size = 7;
 
+  const onClickCb = useEvent(onClick);
+
   return (
-    <GhostButton
+    <Button
+      variant={"brandGhost}"}
       data-testid="BurgerClose"
-      onClick={onClick}
+      onClick={onClickCb}
       h={size}
       w={size}
       minH={size}
       minW={size}
-      padding={1}
+      p={1}
       bgColor={"brand.lightGray"}
+      _dark={{
+        bgColor: "brand.gray",
+      }}
       borderRadius={"50%"}
     >
       <CrossIcon fill={fill} />
-    </GhostButton>
+    </Button>
   );
 }

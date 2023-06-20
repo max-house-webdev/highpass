@@ -6,7 +6,7 @@ export function Top() {
   return (
     <Container
       as={"header"}
-      minH={{ base: "70px", md: "80px" }}
+      minHeight={{ base: "70px", md: "80px" }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
