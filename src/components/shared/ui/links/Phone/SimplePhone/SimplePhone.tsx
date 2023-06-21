@@ -1,5 +1,6 @@
 import { Link, LinkProps } from "@chakra-ui/react";
 import { Phone as PhoneIcon } from "@components/shared/icons/Phone";
+import { useToggleAccent } from "@features/colorMode/useToggleAccent";
 
 export interface ISimplePhoneProps extends LinkProps {
   phoneNumber: string | number;
@@ -9,17 +10,19 @@ export interface ISimplePhoneProps extends LinkProps {
 export function SimplePhone(props: ISimplePhoneProps) {
   const { phoneNumber, formattedPhoneNumber, ...rest } = props;
 
+  const fill = useToggleAccent();
+
   return (
     <Link
       href={`tel:+7${phoneNumber}`}
-      color={"brand.accent"}
+      color={fill}
       data-testid="PhoneLink"
       display={"flex"}
       justifyContent={"center"}
       justifySelf={{ base: "flex-end", md: "normal" }}
       {...rest}
     >
-      <PhoneIcon fill={"brand.accent"} marginInlineEnd={"1"} />
+      <PhoneIcon fill={fill} marginInlineEnd={"1"} />
       +7 {formattedPhoneNumber}
     </Link>
   );

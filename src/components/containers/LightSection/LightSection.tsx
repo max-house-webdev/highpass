@@ -11,5 +11,16 @@ export function LightSection(props: ILightSectionProps) {
 
   const bgColor = useColorModeValue("brand.white", "brand.lightGray");
 
-  return <Container bgColor={bgColor}>{children}</Container>;
+  return (
+    <Container
+      display={"grid"}
+      gridTemplateColumns={"repeat(4, 1fr)"}
+      gridGap={7}
+      gridTemplateAreas={"'banner banner banner banner'"}
+      bgColor={bgColor}
+      py={5}
+    >
+      {children}
+    </Container>
+  );
 }

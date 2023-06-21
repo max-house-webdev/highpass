@@ -6,7 +6,7 @@ export function Bottom() {
   const device = useAppMediaQuery();
 
   return (
-    <Container minH={"45px"} bgColor={"brand.gray"}>
+    <Container minH={"45px"} mb={5} bgColor={"brand.gray"}>
       {device === "isMobile" && <MobileDrawer />}
     </Container>
   );

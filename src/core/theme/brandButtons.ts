@@ -30,11 +30,11 @@ const brandPrimary = defineStyle({
     borderColor: colors.brand.accentHover,
   },
 
-  // _dark: {
-  //   bgColor: colors.inverted.accent,
-  //   color: colors.inverted.white,
-  //   borderColor: "brand.accent",
-  // },
+  _dark: {
+    bgColor: colors.darkTheme.accent,
+    color: colors.brand.lightGray,
+    borderColor: colors.darkTheme.accent,
+  },
 });
 
 export const brandButtons = defineStyleConfig({

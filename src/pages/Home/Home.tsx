@@ -6,7 +6,6 @@ export function Home() {
     <>
       <Header />
       <Hero />
-      Home Page
     </>
   );
 }
