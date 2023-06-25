@@ -52,5 +52,16 @@
     "@craco/craco": "^7.1.0",
     "@types/uuid": "^9.0.2",
     "generate-react-cli": "^8.3.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@src/(.*)": "<rootDir>/src/$1",
+      "@images/(.*)": "<rootDir>/src/assets/images/$1",
+      "@core/(.*)": "<rootDir>/src/core/$1",
+      "@features/(.*)": "<rootDir>/src/features/$1",
+      "@pages/(.*)": "<rootDir>/src/pages/$1",
+      "@components/(.*)": "<rootDir>/src/components/$1",
+      "@mh-utils/(.*)": "<rootDir>/src/mh-utils/$1"
+    }
   }
 }

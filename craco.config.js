@@ -12,7 +12,6 @@ module.exports = {
       "@core": path.resolve(__dirname, "src/core"),
       "@features": path.resolve(__dirname, "src/features"),
       "@pages": path.resolve(__dirname, "src/pages"),
-      "@layouts": path.resolve(__dirname, "src/layouts"),
 
       "@components": path.resolve(__dirname, `${components}`),
 
