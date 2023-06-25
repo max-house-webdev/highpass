@@ -9,9 +9,9 @@ export function NavMenuList() {
   return (
     <SimpleNavMenuList>
       {sections.map((item) => {
-        const { id, title } = item;
+        const { id, heading } = item;
 
-        return <MenuItem key={uuidv4()} href={id} title={title} />;
+        return <MenuItem key={uuidv4()} href={id} heading={heading} />;
       })}
     </SimpleNavMenuList>
   );
