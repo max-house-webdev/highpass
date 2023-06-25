@@ -12,11 +12,12 @@ const brandGhost = defineStyle({
 
 const brandPrimary = defineStyle({
   fontFamily: "inherit",
+  fontSize: "0.75rem",
   bgColor: colors.brand.accent,
   color: colors.brand.white,
   rounded: "none",
-  py: 3,
-  px: 6,
+  py: 2,
+  px: 7,
   borderWidth: 3,
   borderStyle: "solid",
   borderColor: colors.brand.accent,
