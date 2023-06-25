@@ -9,12 +9,7 @@ export function Primary(props: IPrimaryProps) {
   const { textContent, ...rest } = props;
 
   return (
-    <Link
-      as={ReactRouterLink}
-      data-testid="Primary"
-      variant={"brandPrimary"}
-      {...rest}
-    >
+    <Link as={ReactRouterLink} variant={"brandPrimary"} {...rest}>
       {textContent}
     </Link>
   );

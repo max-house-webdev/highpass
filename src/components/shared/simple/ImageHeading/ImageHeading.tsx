@@ -11,7 +11,13 @@ export function ImageHeading(props: IImageHeadingProps) {
   const textColor = useToggleWhite();
 
   return (
-    <Heading color={textColor} fontFamily={"brand"} {...rest}>
+    <Heading
+      color={textColor}
+      fontFamily={"brand"}
+      fontSize={"1.5rem"}
+      lineHeight={1.2}
+      {...rest}
+    >
       {textContent}
     </Heading>
   );
