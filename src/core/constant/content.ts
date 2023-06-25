@@ -1,9 +1,9 @@
 export const sections = [
-  { title: "О студии", id: "about" },
-  { title: "Наши проекты", id: "projects" },
-  { title: "Услуги", id: "service" },
-  { title: "Мастер-классы", id: "master-classes" },
-  { title: "Контакты", id: "contacts" },
+  { heading: "О студии", id: "about" },
+  { heading: "Наши проекты", id: "projects" },
+  { heading: "Услуги", id: "service" },
+  { heading: "Мастер-классы", id: "master-classes" },
+  { heading: "Контакты", id: "contacts" },
 ];
 
 export const contacts = {
@@ -11,6 +11,7 @@ export const contacts = {
 };
 
 export const hero = {
-  title: "Неоновый фотосет 2.0 7 июля 20:00",
-  description: "Мастер-класс от Игоря Робова",
+  imageHeading: "Неоновый фотосет 2.0 7 июля 20:00",
+  imageDescription: "Мастер-класс от Игоря Робова",
+  sectionHeading: "Работы участников предыдущего мастер-класса",
 };
