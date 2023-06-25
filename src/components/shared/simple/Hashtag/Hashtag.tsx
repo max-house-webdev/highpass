@@ -15,8 +15,9 @@ export function Hashtag(props: IHashtagProps) {
       as={"span"}
       bgColor={"brand.gray"}
       px={2}
-      py={1}
+      py={0.5}
       color={color}
+      fontSize={"0.75rem"}
       {...rest}
     >
       {`#${textContent}`}
