@@ -13,11 +13,13 @@ export function Hashtag(props: IHashtagProps) {
   return (
     <Text
       as={"span"}
-      bgColor={"brand.gray"}
+      marginInlineStart={"auto"}
+      marginBlockEnd={"auto"}
       px={2}
       py={0.5}
       color={color}
       fontSize={"0.75rem"}
+      bgColor={"brand.gray"}
       {...rest}
     >
       {`#${textContent}`}
