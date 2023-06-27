@@ -9,10 +9,10 @@ export type TDevice =
   | null;
 
 export function useAppMediaQuery(): TDevice {
-  const { sm, md, lg, xxl } = breakpoints;
+  const { min, md, lg, xxl } = breakpoints;
 
   const [isMobile, isTablet, isTabletWide, isDesktop] = useMediaQuery([
-    `(min-width: ${sm}px) and (max-width: ${md - 1}px)`,
+    `(min-width: ${min}px) and (max-width: ${md - 1}px)`,
     `(min-width: ${md}px) and (max-width: ${lg - 1}px)`,
     `(min-width: ${lg}px) and (max-width: ${xxl - 1}px)`,
     `(min-width: ${xxl}px)`,
