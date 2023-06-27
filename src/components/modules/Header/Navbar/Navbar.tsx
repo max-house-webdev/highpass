@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { Phone as PhoneLink } from "@src/components/shared/ui/links/Phone";
-import { NavMenuList } from "../NavMenuList";
+import { NavMenuList } from "../../NavMenuList";
 
 export function Navbar() {
   return (

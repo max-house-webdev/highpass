@@ -6,7 +6,7 @@ import { animationDuration } from "@core/constant/animation";
 import { BurgerOpen as BurgerOpenButton } from "../ui/BurgerOpen";
 import { BurgerClose as BurgerCloseButton } from "../ui/BurgerClose";
 import { Drawer } from "./Drawer";
-import { Navbar } from "../../Navbar";
+import { Navbar } from "../Navbar";
 
 export function MobileDrawer() {
   const { appearanceState, onOpen, onClose } = useAppearanceAnimation({
