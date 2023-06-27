@@ -39,6 +39,7 @@ export function Hero() {
           hashtag={heroContent.banner.hashtag}
           heading={heroContent.banner.heading}
           subHeading={heroContent.banner.subHeading}
+          description={heroContent.banner.description}
           button={<FindOutMoreLink />}
         />
       )}

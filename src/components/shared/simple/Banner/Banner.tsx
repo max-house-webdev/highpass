@@ -2,18 +2,28 @@ import { Box, VStack } from "@chakra-ui/react";
 
 import { Hashtag } from "../Hashtag";
 import { Heading } from "./Heading";
+import { Description } from "./Description";
 
 export interface IBannerProps {
   bgImage: string;
-  heading: string;
+  description: string;
+  heading?: string;
   subHeading?: string;
-  hashtag: string;
+  hashtag?: string;
   button?: JSX.Element;
   gridArea?: string;
 }
 
 export function Banner(props: IBannerProps) {
-  const { gridArea, bgImage, heading, subHeading, hashtag, button } = props;
+  const {
+    gridArea,
+    bgImage,
+    description,
+    heading,
+    subHeading,
+    hashtag,
+    button,
+  } = props;
 
   return (
     <Box
@@ -32,9 +42,11 @@ export function Banner(props: IBannerProps) {
         justifyContent={"flex-end"}
         alignItems={"flex-start"}
       >
-        <Hashtag textContent={hashtag} />
+        {hashtag && <Hashtag textContent={hashtag} />}
 
-        <Heading textContent={heading} />
+        <Description textContent={description} />
+
+        {heading && <Heading textContent={heading} />}
         {subHeading && <Heading textContent={subHeading} />}
 
         {button}
