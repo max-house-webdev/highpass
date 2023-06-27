@@ -8,6 +8,7 @@ import { FindOutMore as FindOutMoreLink } from "./ui/FindOutMore";
 
 import { useContent } from "@core/store/content";
 import { useRemoteData } from "@src/features/hooks/useRemoteData";
+import { SectionHeading } from "@src/components/shared/simple/SectionHeading";
 
 export function Hero() {
   const bgColor = useColorModeValue("brand.white", "brand.lightGray");
@@ -16,6 +17,31 @@ export function Hero() {
   const fetchHero = useContent((store) => store.fetchHero);
 
   useRemoteData(fetchHero);
+
+  const Hoc = (content: typeof heroContent) => {
+    if (!heroContent) {
+      return <Spinner gridArea={"banner"} size={"lg"} justifySelf={"center"} />;
+    }
+
+    if (heroContent.sectionHeading && heroContent.banner) {
+      return (
+        <>
+          <Banner
+            gridArea="banner"
+            bgImage={heroContent.banner.bgImage}
+            hashtag={heroContent.banner.hashtag}
+            heading={heroContent.banner.heading}
+            description={heroContent.banner.description}
+            button={<FindOutMoreLink />}
+          />
+          <SectionHeading
+            gridArea={"section-heading"}
+            textContent={heroContent.sectionHeading}
+          />
+        </>
+      );
+    }
+  };
 
   return (
     <Container
@@ -29,20 +55,7 @@ export function Hero() {
       bgColor={bgColor}
       py={5}
     >
-      {!heroContent && (
-        <Spinner gridArea={"banner"} size={"lg"} justifySelf={"center"} />
-      )}
-      {heroContent && heroContent.banner && (
-        <Banner
-          gridArea="banner"
-          bgImage={heroContent.banner.bgImage}
-          hashtag={heroContent.banner.hashtag}
-          heading={heroContent.banner.heading}
-          subHeading={heroContent.banner.subHeading}
-          description={heroContent.banner.description}
-          button={<FindOutMoreLink />}
-        />
-      )}
+      {Hoc(heroContent)}
       {/* <Image srcSet={banner} alt="banner" fit={"cover"} w={"100%"} /> */}
     </Container>
   );

@@ -6,8 +6,7 @@ export type TContacts = {
 
 export type TBanner = {
   bgImage: string;
-  heading: string;
-  subHeading?: string;
+  heading: Array<string> | string;
   description: string;
   hashtag: string;
 };

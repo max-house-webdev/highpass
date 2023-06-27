@@ -16,8 +16,7 @@ export const content: IContent = {
     sectionHeading: "Работы участников предыдущего мастер-класса",
     banner: {
       bgImage: heroBannerBgImage,
-      heading: "Неоновый фотосет 2.0",
-      subHeading: "7 июля 20:00",
+      heading: ["Неоновый", "фотосет 2.0", "7 июля 20:00"],
       description: "Мастер-класс от Игоря Робова",
       hashtag: "мастеркласс",
     },

@@ -14,8 +14,8 @@ export function Heading(props: IHeadingProps) {
     <ChakraHeading
       color={textColor}
       fontFamily={"brand"}
-      fontSize={"1.5rem"}
-      lineHeight={1.2}
+      fontSize={"1.7rem"}
+      lineHeight={0.8}
       {...rest}
     >
       {textContent}

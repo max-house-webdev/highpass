@@ -1,29 +1,18 @@
 import { Box, VStack } from "@chakra-ui/react";
+import { v4 as uuidv4 } from "uuid";
 
 import { Hashtag } from "../Hashtag";
 import { Heading } from "./Heading";
 import { Description } from "./Description";
+import { TBanner } from "@src/core/store/content/interfaces";
 
-export interface IBannerProps {
-  bgImage: string;
-  description: string;
-  heading?: string;
-  subHeading?: string;
-  hashtag?: string;
+export interface IBannerProps extends TBanner {
   button?: JSX.Element;
   gridArea?: string;
 }
 
 export function Banner(props: IBannerProps) {
-  const {
-    gridArea,
-    bgImage,
-    description,
-    heading,
-    subHeading,
-    hashtag,
-    button,
-  } = props;
+  const { gridArea, bgImage, description, heading, hashtag, button } = props;
 
   return (
     <Box
@@ -46,8 +35,13 @@ export function Banner(props: IBannerProps) {
 
         <Description textContent={description} />
 
-        {heading && <Heading textContent={heading} />}
-        {subHeading && <Heading textContent={subHeading} />}
+        {heading && typeof heading === "string" && (
+          <Heading textContent={heading} />
+        )}
+
+        {heading &&
+          Array.isArray(heading) &&
+          heading.map((item) => <Heading key={uuidv4()} textContent={item} />)}
 
         {button}
       </VStack>
