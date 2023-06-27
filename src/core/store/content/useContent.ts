@@ -18,7 +18,7 @@ export const useContent = create<IContentState>()(
         contacts: content.contacts,
         hero: null,
 
-        getHero() {
+        fetchHero() {
           new Promise((resolve) => {
             setTimeout(
               () =>

@@ -28,5 +28,5 @@ export interface IContentState {
   contacts: TContacts;
   hero: TSectionContent | null;
 
-  getHero: () => void;
+  fetchHero: () => void;
 }

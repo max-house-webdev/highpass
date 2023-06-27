@@ -7,14 +7,15 @@ import { Spinner } from "@components/shared/simple/Spinner";
 import { FindOutMore as FindOutMoreLink } from "./ui/FindOutMore";
 
 import { useContent } from "@core/store/content";
+import { useRemoteData } from "@src/features/hooks/useRemoteData";
 
 export function Hero() {
   const bgColor = useColorModeValue("brand.white", "brand.lightGray");
-
-  const getHero = useContent((store) => store.getHero);
-  getHero();
-
   const heroContent = useContent((store) => store.hero);
+
+  const fetchHero = useContent((store) => store.fetchHero);
+
+  useRemoteData(fetchHero);
 
   return (
     <Container
@@ -41,7 +42,6 @@ export function Hero() {
           button={<FindOutMoreLink />}
         />
       )}
-
       {/* <Image srcSet={banner} alt="banner" fit={"cover"} w={"100%"} /> */}
     </Container>
   );
