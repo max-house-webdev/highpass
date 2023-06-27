@@ -33,6 +33,9 @@ export function Drawer(props: IDrawerProps) {
         borderTopStyle={"solid"}
         borderTopWidth={"2px"}
         borderTopColor={"brand.lightGray"}
+        borderBottomStyle={"solid"}
+        borderBottomWidth={"2px"}
+        borderBottomColor={"brand.lightGray"}
         animation={animation}
       >
         {children}

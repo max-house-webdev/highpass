@@ -14,6 +14,7 @@ export type TBanner = {
 export type TSectionContent = {
   sectionHeading: string;
   banner?: TBanner;
+  gallery?: Array<string>;
 };
 
 export interface IContent {
