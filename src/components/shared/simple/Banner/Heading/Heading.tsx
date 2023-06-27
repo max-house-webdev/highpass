@@ -1,17 +1,17 @@
-import { Heading, HeadingProps } from "@chakra-ui/react";
+import { Heading as ChakraHeading, HeadingProps } from "@chakra-ui/react";
 import { useToggleWhite } from "@src/features/colorMode/useToggleWhite";
 
-export interface IImageHeadingProps extends HeadingProps {
+export interface IHeadingProps extends HeadingProps {
   textContent: string;
 }
 
-export function ImageHeading(props: IImageHeadingProps) {
+export function Heading(props: IHeadingProps) {
   const { textContent, ...rest } = props;
 
   const textColor = useToggleWhite();
 
   return (
-    <Heading
+    <ChakraHeading
       color={textColor}
       fontFamily={"brand"}
       fontSize={"1.5rem"}
@@ -19,6 +19,6 @@ export function ImageHeading(props: IImageHeadingProps) {
       {...rest}
     >
       {textContent}
-    </Heading>
+    </ChakraHeading>
   );
 }

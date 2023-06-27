@@ -1,24 +1,25 @@
-import { Box, Image, useColorModeValue } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
-import { ImageHeading } from "@components/shared/simple/ImageHeading";
-import { Hashtag } from "@components/shared/simple/Hashtag";
-import banner from "@images/Hero/banner.jpg";
-import main from "@images/Hero/main.jpg";
-import small_1 from "@images/Hero/small_1.jpg";
-import small_2 from "@images/Hero/small_2.jpg";
+import { Container } from "@components/containers/Container";
+import { Banner } from "@components/shared/simple/Banner";
+import { Spinner } from "@components/shared/simple/Spinner";
+
 import { FindOutMore as FindOutMoreLink } from "./ui/FindOutMore";
 
-import { hero } from "@core/constant/content";
-import { Container } from "@src/components/containers/Container";
-import { BannerContainer } from "@src/components/containers/BannerContainer";
+import { useContent } from "@core/store/content";
 
 export function Hero() {
-  const { imageHeading, imageSubheading, imageDescription } = hero;
-
   const bgColor = useColorModeValue("brand.white", "brand.lightGray");
+
+  const getHero = useContent((store) => store.getHero);
+  getHero();
+
+  const heroContent = useContent((store) => store.hero);
 
   return (
     <Container
+      as={"section"}
+      id={"hero"}
       display={"grid"}
       gridTemplateColumns={"repeat(4, 1fr)"}
       gridGap={7}
@@ -27,20 +28,19 @@ export function Hero() {
       bgColor={bgColor}
       py={5}
     >
-      <Box
-        gridArea={"banner"}
-        minH={"422px"}
-        bgImage={banner}
-        bgRepeat={"no-repeat"}
-        bgSize={"cover"}
-      >
-        <BannerContainer>
-          <Hashtag textContent="мастеркласс" />
-          <ImageHeading textContent={imageHeading} maxW={"10rem"} />
-          <ImageHeading textContent={imageSubheading} />
-          <FindOutMoreLink />
-        </BannerContainer>
-      </Box>
+      {!heroContent && (
+        <Spinner gridArea={"banner"} size={"lg"} justifySelf={"center"} />
+      )}
+      {heroContent && heroContent.banner && (
+        <Banner
+          gridArea="banner"
+          bgImage={heroContent.banner.bgImage}
+          hashtag={heroContent.banner.hashtag}
+          heading={heroContent.banner.heading}
+          subHeading={heroContent.banner.subHeading}
+          button={<FindOutMoreLink />}
+        />
+      )}
 
       {/* <Image srcSet={banner} alt="banner" fit={"cover"} w={"100%"} /> */}
     </Container>
