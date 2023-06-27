@@ -9,10 +9,3 @@ export const sections = [
 export const contacts = {
   phoneNumber: 49542423532,
 };
-
-export const hero = {
-  imageHeading: "Неоновый фотосет 2.0",
-  imageSubheading: "7 июля 20:00",
-  imageDescription: "Мастер-класс от Игоря Робова",
-  sectionHeading: "Работы участников предыдущего мастер-класса",
-};
