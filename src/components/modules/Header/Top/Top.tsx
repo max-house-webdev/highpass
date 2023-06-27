@@ -1,4 +1,4 @@
-import { Container } from "@components/containers/Container";
+import { Container } from "@src/components/shared/Container";
 import { Logo } from "@src/components/shared/ui/links/Logo";
 import { Search as SearchButton } from "@components/shared/ui/buttons/Search";
 

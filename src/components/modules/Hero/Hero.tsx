@@ -1,6 +1,6 @@
 import { useColorModeValue } from "@chakra-ui/react";
 
-import { Container } from "@components/containers/Container";
+import { Container } from "@src/components/shared/Container";
 import { Banner } from "@components/shared/simple/Banner";
 import { Spinner } from "@components/shared/simple/Spinner";
 
