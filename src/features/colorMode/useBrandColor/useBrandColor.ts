@@ -1,7 +1,7 @@
 import { theme } from "@core/theme";
 import type { TBrandColor } from "@core/theme";
 
-export type TUseBrandColor =
+export type TColor =
   | "white"
   | "black"
   | "gray"
@@ -12,7 +12,7 @@ export type TUseBrandColor =
   | "accentFocus"
   | "accentActive";
 
-export function useBrandColor(color: TUseBrandColor) {
+export function useBrandColor(color: TColor) {
   const { brand } = theme.colors as Record<string, TBrandColor>;
 
   switch (color) {

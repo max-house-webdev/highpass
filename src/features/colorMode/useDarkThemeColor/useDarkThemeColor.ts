@@ -1,13 +1,13 @@
 import { theme } from "@core/theme";
 import type { TBrandColor } from "@core/theme";
 
-export type TUseDarkThemeColor =
+export type TDarkThemeColor =
   | "accent"
   | "accentHover"
   | "accentFocus"
   | "accentActive";
 
-export function useDarkThemeColor(color: TUseDarkThemeColor) {
+export function useDarkThemeColor(color: TDarkThemeColor) {
   const { darkTheme } = theme.colors as Record<string, TBrandColor>;
 
   switch (color) {

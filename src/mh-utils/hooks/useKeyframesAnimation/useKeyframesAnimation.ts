@@ -1,7 +1,7 @@
 import { usePrefersReducedMotion } from "@chakra-ui/react";
 import { keyframes } from "@emotion/react";
 
-export interface IUseKeyframesAnimation {
+export interface IKeyframesAnimation {
   animationCSSInterpolation: string;
   animationDuration?: number;
   animationTimingFunction?:
@@ -23,7 +23,7 @@ export interface IUseKeyframesAnimation {
   animationPlayState?: "running" | "paused";
 }
 
-export function useKeyframesAnimation(props: IUseKeyframesAnimation) {
+export function useKeyframesAnimation(props: IKeyframesAnimation) {
   const {
     animationCSSInterpolation,
     animationDuration = 400,
