@@ -8,7 +8,7 @@ export function Bottom() {
   const device = useAppMediaQuery();
 
   return (
-    <Container minH={"45px"} mb={5} bgColor={"brand.gray"}>
+    <Container as={"header"} minH={"45px"} mb={5} bgColor={"brand.gray"}>
       {device === "isMobile" && (
         <HStack justifyContent={"space-between"}>
           <MobileDrawer />
