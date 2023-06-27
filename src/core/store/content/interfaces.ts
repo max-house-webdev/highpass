@@ -1,4 +1,5 @@
 export type TSections = Array<{ heading: string; id: string }>;
+
 export type TContacts = {
   phoneNumber: number;
 };
@@ -17,14 +18,14 @@ export type TSectionContent = {
 };
 
 export interface IContent {
-  sections: TSections | null;
-  contacts: TContacts | null;
+  sections: TSections;
+  contacts: TContacts;
   hero: TSectionContent | null;
 }
 
 export interface IContentState {
-  sections: TSections | null;
-  contacts: TContacts | null;
+  sections: TSections;
+  contacts: TContacts;
   hero: TSectionContent | null;
 
   getHero: () => void;

@@ -1,10 +1,10 @@
-import { contacts } from "@core/constant/content";
+import { useContent } from "@core/store/content";
 import { formatPhoneNumber } from "./formatPhoneNumber";
 
 import { SimplePhone } from "./SimplePhone";
 
 export function Phone() {
-  const { phoneNumber } = contacts;
+  const phoneNumber = useContent((store) => store.contacts.phoneNumber);
 
   return (
     <SimplePhone

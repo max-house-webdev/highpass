@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { devtools, persist } from "zustand/middleware";
+
 import { IContentState } from "./interfaces";
 import { content, DELAY } from "./constant";
 
@@ -11,14 +12,14 @@ const persistOptions = {
 
 export const useContent = create<IContentState>()(
   devtools(
-    persist((set, get) => {
+    persist((set) => {
       return {
-        sections: null,
-        contacts: null,
+        sections: content.sections,
+        contacts: content.contacts,
         hero: null,
 
-        async getHero() {
-          const promise = new Promise((resolve) => {
+        getHero() {
+          new Promise((resolve) => {
             setTimeout(
               () =>
                 resolve(
@@ -36,24 +37,8 @@ export const useContent = create<IContentState>()(
               DELAY
             );
           });
-
-          return await promise;
         },
       };
     }, persistOptions)
   )
 );
-
-// const useContent = create<IContentState>()(
-//   devtools(
-//     persist(
-//       (set) => ({
-//         state: TContentState,
-//         increase: (by) => set((state) => ({ bears: state.bears + by })),
-//       }),
-//       {
-//         name: "bear-storage",
-//       }
-//     )
-//   )
-// );
