@@ -1,4 +1,5 @@
 import { studioContacts } from "./studio-contacts";
+import { sections } from "./sections";
 
 export const content = {
   sectionNavigation: [
@@ -9,4 +10,5 @@ export const content = {
     { heading: "Контакты", id: "contacts" },
   ],
   studioContacts,
+  sections,
 };
