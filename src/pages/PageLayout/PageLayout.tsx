@@ -10,11 +10,11 @@ export interface IPageLayoutProps {
 export function PageLayout(props: IPageLayoutProps) {
   const { pageIndex, children, ...rest } = props;
 
-  const { sections } = content;
+  const { sectionNavigation } = content;
 
   return (
-    <div id={sections[pageIndex].id} {...rest}>
-      <SectionHeading>{sections[pageIndex].heading}</SectionHeading>
+    <div id={sectionNavigation[pageIndex].id} {...rest}>
+      <SectionHeading>{sectionNavigation[pageIndex].heading}</SectionHeading>
       {children}
     </div>
   );

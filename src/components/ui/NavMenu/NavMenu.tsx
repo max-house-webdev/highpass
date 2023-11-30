@@ -8,11 +8,11 @@ export interface INavMenuProps extends FlexProps {}
 export function NavMenu(props: INavMenuProps) {
   const {} = props;
 
-  const { sections } = content;
+  const { sectionNavigation } = content;
 
   return (
     <Flex as={"nav"} justifyContent={"space-between"}>
-      {sections.map((section) => (
+      {sectionNavigation.map((section) => (
         <ReactRouterNavLink to={section.id} key={uuidv4()}>
           {section.heading}
         </ReactRouterNavLink>
