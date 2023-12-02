@@ -10,6 +10,7 @@ export const hero = {
     heading: ["Неоновый", "фотосет 2.0", "7 июля 20:00"],
     description: "Мастер-класс от Игоря Робова",
     hashtag: "мастеркласс",
+    btnTextContent: "Узнать больше",
   },
   gallery: [main, small_1, small_2],
 };

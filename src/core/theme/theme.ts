@@ -7,6 +7,7 @@ import {
   brandContainer,
   brandHeading,
   brandLinks,
+  brandText,
 } from "./components";
 import { fonts } from "./fonts";
 
@@ -22,5 +23,6 @@ export const theme = extendTheme({
     Container: brandContainer,
     Heading: brandHeading,
     Link: brandLinks,
+    Text: brandText,
   },
 });
