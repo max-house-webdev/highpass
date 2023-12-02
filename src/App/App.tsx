@@ -1,11 +1,13 @@
 import { ChakraProvider } from "@chakra-ui/react";
 
-import { theme } from "@core/theme";
+import { Fonts } from "@components/global/Fonts";
 import { Router } from "@components/global/Router";
+import { theme } from "@core/theme";
 
 export function App() {
   return (
     <ChakraProvider theme={theme}>
+      <Fonts />
       <Router />
     </ChakraProvider>
   );

@@ -11,7 +11,10 @@ export function NavMenu(props: INavMenuProps) {
   const { sectionNavigation } = content;
 
   return (
-    <Flex as={"nav"} justifyContent={"space-between"}>
+    <Flex as={"nav"} justifyContent={"space-between"} flexWrap={"wrap"}>
+      <ReactRouterNavLink to={"/"} key={uuidv4()}>
+        highpass
+      </ReactRouterNavLink>
       {sectionNavigation.map((section) => (
         <ReactRouterNavLink to={section.id} key={uuidv4()}>
           {section.heading}

@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import { Container } from "@components/global/Container";
 import { NavMenu } from "@components/ui/NavMenu";
 import { Outlet } from "react-router-dom";
@@ -8,9 +9,9 @@ export function Layout() {
       <Container as={"header"}>
         <NavMenu />
       </Container>
-      <Container as={"main"}>
+      <Box as={"main"}>
         <Outlet />
-      </Container>
+      </Box>
     </>
   );
 }
