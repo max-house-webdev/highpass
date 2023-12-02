@@ -12,14 +12,17 @@ export function NavMenu(props: INavMenuProps) {
 
   return (
     <Flex as={"nav"} justifyContent={"space-between"} flexWrap={"wrap"}>
-      <ReactRouterNavLink to={"/"} key={uuidv4()}>
-        highpass
-      </ReactRouterNavLink>
-      {sectionNavigation.map((section) => (
-        <ReactRouterNavLink to={section.id} key={uuidv4()}>
-          {section.heading}
-        </ReactRouterNavLink>
-      ))}
+      {sectionNavigation.map((section) => {
+        return section.id === "hero" ? (
+          <ReactRouterNavLink to={"/"} key={uuidv4()}>
+            highpass logo
+          </ReactRouterNavLink>
+        ) : (
+          <ReactRouterNavLink to={section.id} key={uuidv4()}>
+            {section.heading}
+          </ReactRouterNavLink>
+        );
+      })}
     </Flex>
   );
 }

@@ -3,6 +3,7 @@ import { sections } from "./sections";
 
 export const content = {
   sectionNavigation: [
+    { heading: "Работы участников предыдущего мастер-класса", id: "hero" },
     { heading: "О студии", id: "about" },
     { heading: "Наши проекты", id: "projects" },
     { heading: "Услуги", id: "services" },

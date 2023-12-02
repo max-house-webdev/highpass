@@ -5,5 +5,5 @@ export interface IContactsProps {}
 export function Contacts(props: IContactsProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={4}>children</PageLayout>;
+  return <PageLayout pageIndex={5}>children</PageLayout>;
 }

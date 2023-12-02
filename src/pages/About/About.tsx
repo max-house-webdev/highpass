@@ -5,5 +5,5 @@ export interface IAboutProps {}
 export function About(props: IAboutProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={0}>children</PageLayout>;
+  return <PageLayout pageIndex={1}>children</PageLayout>;
 }

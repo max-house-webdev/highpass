@@ -5,5 +5,5 @@ export interface IMasterClassesProps {}
 export function MasterClasses(props: IMasterClassesProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={3}>children</PageLayout>;
+  return <PageLayout pageIndex={4}>children</PageLayout>;
 }
