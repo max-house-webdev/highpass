@@ -12,5 +12,5 @@ export const hero = {
     hashtag: "мастеркласс",
     btnTextContent: "Узнать больше",
   },
-  gallery: [main, small_1, small_2],
+  gallery: { main, small: [small_1, small_2] },
 };

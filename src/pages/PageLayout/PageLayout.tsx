@@ -17,6 +17,7 @@ export function PageLayout(props: IPageLayoutProps) {
     <ChakraContainer
       as={"section"}
       id={sectionNavigation[pageIndex].id}
+      paddingBlockStart={4}
       {...rest}
     >
       <SectionHeading>{sectionNavigation[pageIndex].heading}</SectionHeading>

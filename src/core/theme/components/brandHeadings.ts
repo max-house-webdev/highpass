@@ -1,6 +1,8 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react";
 
 const sectionHeading = defineStyle({
+  marginBlockStart: 4,
+  marginBlockEnd: 4,
   fontFamily: "brand",
   fontSize: "1.125rem",
 });
