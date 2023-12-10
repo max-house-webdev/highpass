@@ -1,9 +1,9 @@
-import { PageLayout } from "@pages/PageLayout";
+import { Page } from "@components/layouts/Page";
 
 export interface IContactsProps {}
 
 export function Contacts(props: IContactsProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={5}>children</PageLayout>;
+  return <Page pageIndex={5}>children</Page>;
 }

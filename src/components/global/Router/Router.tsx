@@ -1,7 +1,7 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Layout } from "@components/global/Layout";
-import { useAppMediaQuery } from "@hooks/useAppMediaQuery";
+import { Layout } from "@src/components/layouts/Layout";
+// import { useAppMediaQuery } from "@hooks/useAppMediaQuery";
 import { About } from "@pages/About";
 import { Contacts } from "@pages/Contacts";
 import { Error } from "@pages/Error";
@@ -11,7 +11,7 @@ import { Projects } from "@pages/Projects";
 import { Services } from "@pages/Services";
 
 export function Router() {
-  const device = useAppMediaQuery();
+  // const device = useAppMediaQuery();
 
   return (
     <BrowserRouter>

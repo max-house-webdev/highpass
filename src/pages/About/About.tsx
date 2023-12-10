@@ -1,9 +1,9 @@
-import { PageLayout } from "@pages/PageLayout";
+import { Page } from "@components/layouts/Page";
 
 export interface IAboutProps {}
 
 export function About(props: IAboutProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={1}>children</PageLayout>;
+  return <Page pageIndex={1}>children</Page>;
 }

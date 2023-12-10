@@ -3,12 +3,12 @@ import { SectionHeading } from "@components/simple/SectionHeading";
 import { ReactNode } from "react";
 import { Container as ChakraContainer, ContainerProps } from "@chakra-ui/react";
 
-export interface IPageLayoutProps extends ContainerProps {
+export interface IPageProps extends ContainerProps {
   pageIndex: number;
   children: ReactNode;
 }
 
-export function PageLayout(props: IPageLayoutProps) {
+export function Page(props: IPageProps) {
   const { pageIndex, children, ...rest } = props;
 
   const { sectionNavigation } = content;

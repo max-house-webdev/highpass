@@ -1,9 +1,8 @@
-import { PageLayout } from "@pages/PageLayout";
-
+import { Page } from "@components/layouts/Page";
 export interface IMasterClassesProps {}
 
 export function MasterClasses(props: IMasterClassesProps) {
   const {} = props;
 
-  return <PageLayout pageIndex={4}>children</PageLayout>;
+  return <Page pageIndex={4}>children</Page>;
 }
