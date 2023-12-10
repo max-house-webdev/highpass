@@ -1,5 +1,5 @@
 import * as globalBreakpoints from "../constant/breakpoints";
-import { addPixels } from "@mh-utils/addUnitsToNumbers";
+import { addPixels } from "@src/mh-utils/tools/addUnitsToNumbers";
 
 const constBreakpoints = globalBreakpoints.breakpoints;
 

@@ -1,7 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
 
 import { breakpoints } from "./breakpoints";
+
 import { colors } from "./colors";
+
 import {
   brandButtons,
   brandContainer,
@@ -9,6 +11,7 @@ import {
   brandLinks,
   brandText,
 } from "./components";
+
 import { fonts } from "./fonts";
 
 export const theme = extendTheme({

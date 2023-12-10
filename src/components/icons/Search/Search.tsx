@@ -1,11 +1,16 @@
 import { Icon, IconProps } from "@chakra-ui/react";
 
+import { colors } from "@core/theme/colors";
+
 export interface ISearchProps extends IconProps {
-  fill: string;
+  fill?: string;
 }
 
 export function Search(props: ISearchProps) {
-  const { fill, ...rest } = props;
+  const { brand } = colors;
+  const { white } = brand;
+
+  const { fill = white, ...rest } = props;
 
   return (
     <Icon

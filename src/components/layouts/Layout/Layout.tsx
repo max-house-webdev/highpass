@@ -1,14 +1,13 @@
-import { Box } from "@chakra-ui/react";
-import { Container } from "@components/global/Container";
-import { NavMenu } from "@components/ui/NavMenu";
 import { Outlet } from "react-router-dom";
+
+import { Box } from "@chakra-ui/react";
+
+import { Header } from "@components/layouts/Header";
 
 export function Layout() {
   return (
     <>
-      <Container as={"header"}>
-        <NavMenu />
-      </Container>
+      <Header />
       <Box as={"main"}>
         <Outlet />
       </Box>
