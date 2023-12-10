@@ -9,7 +9,7 @@ import { BannerHeading } from "@components/simple/BannerHeading";
 import { Hashtag } from "@components/simple/Hashtag";
 import { SectionHeading } from "@components/simple/SectionHeading";
 
-import { Primary as Btn } from "@components/ui/buttons/Primary";
+import { LearnMore as BtnLearnMore } from "@components/ui/buttons/LearnMore";
 
 import { content } from "@core/content";
 
@@ -29,7 +29,8 @@ export function Hero() {
         {heading.map((line) => (
           <BannerHeading key={uuidv4()} textContent={line} />
         ))}
-        <Btn textContent={btnTextContent} marginBlockStart={2} />
+
+        <BtnLearnMore textContent={btnTextContent} marginBlockStart={2} />
       </Banner>
 
       <SectionHeading>{sectionNavigation[0].heading}</SectionHeading>
