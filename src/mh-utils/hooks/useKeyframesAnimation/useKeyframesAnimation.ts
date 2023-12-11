@@ -24,6 +24,12 @@ export interface IKeyframesAnimation {
 }
 
 export function useKeyframesAnimation(props: IKeyframesAnimation) {
+  /**
+   * Hook return keyframes animation prop for ChakraUI components
+   * @param: CSS animation properties
+   * @return: animation<string> | undefined
+   */
+
   const {
     animationCSSInterpolation,
     animationDuration = 400,
@@ -38,6 +44,7 @@ export function useKeyframesAnimation(props: IKeyframesAnimation) {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   const animationKeyframes = keyframes`${animationCSSInterpolation}`;
+
   const animation = `
     ${animationKeyframes} 
     ${animationDuration}ms 
