@@ -18,7 +18,7 @@ describe("<Hashtag />", () => {
   });
 });
 
-test("<LearnMore /> renders correctly", () => {
+test("<Hashtag /> renders correctly", () => {
   const tree = renderer.create(<Hashtag textContent={"hashtag"} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
