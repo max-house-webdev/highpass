@@ -7,5 +7,11 @@ export interface IHashtagProps extends TextProps {
 export function Hashtag(props: IHashtagProps) {
   const { textContent, ...rest } = props;
 
-  return <Text variant={"hashtag"} {...rest}>{`#${textContent}`}</Text>;
+  return (
+    <Text
+      variant={"hashtag"}
+      data-testid={"hashtag"}
+      {...rest}
+    >{`#${textContent}`}</Text>
+  );
 }

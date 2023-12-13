@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LearnMore /> renders correctly 1`] = `
+<button
+  className="chakra-button css-4xx2wk"
+  data-testid="LearnMore"
+  onClick={[Function]}
+  type="button"
+>
+  learn more
+</button>
+`;

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LearnMore /> renders correctly 1`] = `
+<p
+  className="chakra-text css-0"
+  data-testid="hashtag"
+>
+  #hashtag
+</p>
+`;

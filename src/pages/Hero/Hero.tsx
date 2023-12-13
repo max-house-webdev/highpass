@@ -27,7 +27,7 @@ export function Hero() {
         <Hashtag textContent={hashtag} />
         <Text variant={"bannerDescription"}>{description}</Text>
         {heading.map((line) => (
-          <BannerHeading key={uuidv4()} textContent={line} />
+          <BannerHeading key={uuidv4()}>{line}</BannerHeading>
         ))}
 
         <BtnLearnMore textContent={btnTextContent} marginBlockStart={2} />

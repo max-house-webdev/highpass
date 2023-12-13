@@ -9,7 +9,11 @@ export function Container(props: IContainerProps) {
   const { children, ...rest } = props;
 
   return (
-    <ChakraContainer variant={"mainContainer"} {...rest}>
+    <ChakraContainer
+      data-testid="Container"
+      variant={"mainContainer"}
+      {...rest}
+    >
       {children}
     </ChakraContainer>
   );

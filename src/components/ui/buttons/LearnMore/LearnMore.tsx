@@ -1,8 +1,6 @@
-import { ButtonProps } from "@chakra-ui/react";
+import { IPrimaryProps, Primary } from "../Primary";
 
-import { Primary } from "../Primary";
-
-export interface ILearnMoreProps extends ButtonProps {
+export interface ILearnMoreProps extends IPrimaryProps {
   textContent: string;
 }
 
