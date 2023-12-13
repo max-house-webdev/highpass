@@ -38,6 +38,13 @@ const brandPrimary = defineStyle({
   },
 });
 
+const phonenumber = defineStyle({
+  color: colors.brand.accent,
+  fontSize: "0.75rem",
+
+  _visited: {},
+});
+
 export const brandLinks = defineStyleConfig({
-  variants: { brandGhost, brandPrimary },
+  variants: { brandGhost, brandPrimary, phonenumber },
 });

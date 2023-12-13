@@ -1,11 +1,15 @@
 import { Icon, IconProps } from "@chakra-ui/react";
 
+import { colors } from "@core/theme/colors";
 export interface IPhoneProps extends IconProps {
-  fill: string;
+  fill?: string;
 }
 
 export function Phone(props: IPhoneProps) {
-  const { fill, ...rest } = props;
+  const { brand } = colors;
+  const { accent } = brand;
+
+  const { fill = accent, ...rest } = props;
 
   return (
     <Icon

@@ -2,11 +2,9 @@ import { NavLink } from "react-router-dom";
 
 import { Flex } from "@chakra-ui/react";
 
-import { Container } from "@src/components/atoms/Container";
-
-import { Search as BtnSearch } from "@components/atoms/ui/buttons/Search";
-
+import { Container } from "@components/atoms/Container";
 import { Logo as LogoIcon } from "@components/atoms/icons/Logo";
+import { Search as BtnSearch } from "@components/atoms/ui/buttons/Search";
 // import { NavMenu } from "@components/ui/NavMenu";
 
 export function Top() {
