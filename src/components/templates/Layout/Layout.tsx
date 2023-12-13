@@ -7,7 +7,7 @@ import { Header } from "@components/templates/Header";
 export function Layout() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Box as={"main"}>
         <Outlet />
       </Box>

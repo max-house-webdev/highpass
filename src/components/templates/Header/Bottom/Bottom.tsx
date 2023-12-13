@@ -1,4 +1,4 @@
-import { Container } from "@src/components/atoms/containers/Container";
+import { Container } from "@src/components/atoms/Container";
 
 export function Bottom() {
   return (

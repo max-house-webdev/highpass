@@ -1,4 +1,4 @@
-import { Page } from "@src/components/containers/Page";
+import { Page } from "@src/components/templates/Page";
 
 export interface IContactsProps {}
 

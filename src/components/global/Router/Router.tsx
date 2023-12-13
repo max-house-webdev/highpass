@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Layout } from "@src/components/containers/Layout";
+import { Layout } from "@src/components/templates/Layout";
 // import { useAppMediaQuery } from "@hooks/useAppMediaQuery";
 import { About } from "@pages/About";
 import { Contacts } from "@pages/Contacts";
