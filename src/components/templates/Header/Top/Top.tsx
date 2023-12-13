@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 import { Flex } from "@chakra-ui/react";
 
-import { Container } from "@components/global/Container";
+import { Container } from "@src/components/atoms/containers/Container";
 
 import { Search as BtnSearch } from "@components/ui/buttons/Search";
 

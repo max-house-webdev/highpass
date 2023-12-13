@@ -2,12 +2,12 @@ import { Outlet } from "react-router-dom";
 
 import { Box } from "@chakra-ui/react";
 
-import { Header } from "@components/layouts/Header";
+import { Header } from "@components/templates/Header";
 
 export function Layout() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Box as={"main"}>
         <Outlet />
       </Box>

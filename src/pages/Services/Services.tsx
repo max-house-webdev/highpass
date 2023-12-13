@@ -1,4 +1,4 @@
-import { Page } from "@components/layouts/Page";
+import { Page } from "@src/components/containers/Page";
 
 export interface IServicesProps {}
 

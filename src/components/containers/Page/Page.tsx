@@ -1,7 +1,9 @@
-import { content } from "@core/content";
-import { SectionHeading } from "@components/simple/SectionHeading";
 import { ReactNode } from "react";
+
 import { Container as ChakraContainer, ContainerProps } from "@chakra-ui/react";
+
+import { SectionHeading } from "@components/atoms/simple/SectionHeading";
+import { content } from "@core/content";
 
 export interface IPageProps extends ContainerProps {
   pageIndex: number;

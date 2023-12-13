@@ -1,8 +1,8 @@
 import { StackProps, VStack } from "@chakra-ui/react";
 
-export interface IBannerProps extends StackProps {}
+export interface IBannerStackProps extends StackProps {}
 
-export function Banner(props: IBannerProps) {
+export function BannerStack(props: IBannerStackProps) {
   const { children, ...rest } = props;
 
   return (

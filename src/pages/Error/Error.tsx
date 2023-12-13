@@ -1,5 +1,6 @@
 import { Text, VStack } from "@chakra-ui/react";
-import { SectionHeading } from "@components/simple/SectionHeading";
+
+import { SectionHeading } from "@components/atoms/simple/SectionHeading";
 
 export interface IErrorProps {
   heading?: string;
