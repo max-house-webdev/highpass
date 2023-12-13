@@ -2,7 +2,7 @@ import { Grid, Image } from "@chakra-ui/react";
 
 import { v4 as uuidv4 } from "uuid";
 
-import { Container } from "@src/components/atoms/Container";
+import { Container } from "@components/atoms/Container";
 
 import { SectionHeading } from "@components/atoms/simple/SectionHeading";
 

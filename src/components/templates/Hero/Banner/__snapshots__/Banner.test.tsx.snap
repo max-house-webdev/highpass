@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> renders correctly 1`] = `
+<div
+  className="chakra-stack css-11ub2gy"
+  data-testid="Banner"
+>
+  <p
+    className="chakra-text css-0"
+    data-testid="hashtag"
+  >
+    #мастеркласс
+  </p>
+  <p
+    className="chakra-text css-0"
+  >
+    Мастер-класс от Игоря Робова
+  </p>
+  <h2
+    className="chakra-heading css-0"
+  >
+    Неоновый
+  </h2>
+  <h2
+    className="chakra-heading css-0"
+  >
+    фотосет 2.0
+  </h2>
+  <h2
+    className="chakra-heading css-0"
+  >
+    7 июля 20:00
+  </h2>
+  <button
+    className="chakra-button css-1lvhd6m"
+    data-testid="LearnMore"
+    onClick={[Function]}
+    type="button"
+  >
+    Узнать больше
+  </button>
+</div>
+`;
