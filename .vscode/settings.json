@@ -1,0 +1,42 @@
+{
+  "editor.fontSize": 16,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.sortReactImports": "explicit"
+  },
+
+  "files.autoSave": "onFocusChange",
+
+  "stylelint.useLocal": true,
+  "stylelint.autoFixOnSave": true,
+
+  "cSpell.language": "en,ru",
+  "cSpell.words": ["antd", "chakra", "craco", "reduxjs", "testid"],
+
+  "workbench.colorTheme": "One Dark Vivid",
+  "editor.tabSize": 2,
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/grc-component-templates": true,
+    "**/public": true
+  },
+
+  "javascript.format.semicolons": "insert",
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.validate.enable": false,
+
+  "workbench.settings.editor": "json",
+  "workbench.settings.useSplitJSON": true,
+
+  "reactImportSorter.sortingOrder": [
+    "REACT",
+    "MODULES",
+    "PATH_MODULES",
+    "PATH_IMPORTS "
+  ],
+  "reactImportSorter.separateMultilineImports": true
+}

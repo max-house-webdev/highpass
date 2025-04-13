@@ -1,0 +1,44 @@
+{
+  "usesTypeScript": true,
+  "testLibrary": "Testing Library",
+  "component": {
+    "default": {
+      "path": "src/components",
+      "withIndex": true,
+      "withStyle": false,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc-component-templates/default/TemplateName.tsx",
+        "index": "grc-component-templates/default/index.ts"
+      }
+    },
+    "page": {
+      "path": "src/pages",
+      "withIndex": true,
+      "withStyle": false,
+      "withTest": false,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc-component-templates/default/TemplateName.tsx",
+        "index": "grc-component-templates/default/index.ts"
+      }
+    },
+    "test": {
+      "path": "src/components",
+      "withIndex": true,
+      "withStyle": false,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc-component-templates/with-test/TemplateName.tsx",
+        "test": "grc-component-templates/with-test/TemplateName.test.tsx",
+        "index": "grc-component-templates/with-test/index.ts"
+      }
+    }
+  },
+  "usesStyledComponents": true
+}
