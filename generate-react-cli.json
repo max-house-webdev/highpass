@@ -10,22 +10,11 @@
       "withStory": false,
       "withLazy": false,
       "customTemplates": {
-        "component": "grc-component-templates/default/TemplateName.tsx",
-        "index": "grc-component-templates/default/index.ts"
+        "component": "./grc-component-templates/default/TemplateName.tsx",
+        "index": "./grc-component-templates/default/index.ts"
       }
     },
-    "page": {
-      "path": "src/pages",
-      "withIndex": true,
-      "withStyle": false,
-      "withTest": false,
-      "withStory": false,
-      "withLazy": false,
-      "customTemplates": {
-        "component": "grc-component-templates/default/TemplateName.tsx",
-        "index": "grc-component-templates/default/index.ts"
-      }
-    },
+
     "test": {
       "path": "src/components",
       "withIndex": true,
@@ -40,5 +29,6 @@
       }
     }
   },
+
   "usesStyledComponents": true
 }

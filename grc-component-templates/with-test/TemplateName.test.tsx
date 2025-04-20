@@ -1,6 +1,4 @@
-import '@testing-library/jest-dom';
-import { cleanup, render } from '@testing-library/react';
-
+import { cleanup, render, screen } from '@testing-library/react';
 import { TemplateName } from './TemplateName';
 
 afterEach(() => {
@@ -8,9 +6,8 @@ afterEach(() => {
 });
 
 describe('<TemplateName />', () => {
-  test('it should mount', () => {
-    const { asFragment } = render(<TemplateName />);
-
-    expect(asFragment()).toMatchSnapshot();
+  it('should be in the document', () => {
+    render(<TemplateName />);
+    expect(screen.getByTestId('TemplateName')).toBeInTheDocument();
   });
 });

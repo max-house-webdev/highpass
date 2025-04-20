@@ -32,11 +32,6 @@
   "workbench.settings.editor": "json",
   "workbench.settings.useSplitJSON": true,
 
-  "reactImportSorter.sortingOrder": [
-    "REACT",
-    "MODULES",
-    "PATH_MODULES",
-    "PATH_IMPORTS "
-  ],
+  "reactImportSorter.sortingOrder": ["REACT", "MODULES", "PATH_MODULES", "PATH_IMPORTS "],
   "reactImportSorter.separateMultilineImports": true
 }

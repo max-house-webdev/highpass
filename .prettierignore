@@ -1,0 +1,14 @@
+
+/build
+/coverage
+
+/public
+
+/.eslintrc
+
+/**/.git
+/**/.json
+/**/.svn
+/**/.hg
+/**/*.html
+/**/node_modules
